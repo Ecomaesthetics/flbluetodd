@@ -60,10 +60,10 @@ export function Navigation() {
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full" />
             </Link>
-            <a href="/#about" className="text-sm font-medium text-slate-600 hover:text-secondary transition-colors relative group">
+            <Link href="/about" className="text-sm font-medium text-slate-600 hover:text-secondary transition-colors relative group">
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full" />
-            </a>
+            </Link>
             <Link href="/services" className="text-sm font-medium text-slate-600 hover:text-secondary transition-colors relative group">
               Services
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full" />
@@ -149,13 +149,13 @@ export function Navigation() {
             >
               Home
             </Link>
-            <a 
-              href="/#about" 
+            <Link 
+              href="/about" 
               className="text-2xl font-heading font-bold text-slate-800 hover:text-secondary"
               onClick={() => setIsOpen(false)}
             >
               About
-            </a>
+            </Link>
             <Link 
               href="/services" 
               className="text-2xl font-heading font-bold text-slate-800 hover:text-secondary"
