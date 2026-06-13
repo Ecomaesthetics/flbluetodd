@@ -1,5 +1,8 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "wouter";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,7 +12,7 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobilePlansOpen, setIsMobilePlansOpen] = useState(false);
-  const [location] = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +27,7 @@ export function Navigation() {
     setIsOpen(false);
     setIsDropdownOpen(false);
     setIsMobilePlansOpen(false);
-  }, [location]);
+  }, [pathname]);
 
   const plans = [
     { name: "Medicare Advantage (Part C)", href: "/medicare-advantage-plans" },

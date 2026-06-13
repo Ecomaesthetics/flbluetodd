@@ -1,8 +1,9 @@
-import { Navigation } from "@/components/Navigation";
+"use client";
+
 import { ContactForm } from "@/components/ContactForm";
 import { QuoteWidget } from "@/components/QuoteWidget";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -20,7 +21,6 @@ import { motion } from "framer-motion";
 import headshot from "@assets/71e04f91-9873-44b7-b99b-76f26ab6a96d-300x300_(1)_1771607027862.webp";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Footer } from "@/components/Footer";
 import { useSEO } from "@/hooks/use-seo";
 
 export default function Home() {
@@ -45,9 +45,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-body text-slate-800">
-      <Navigation />
-
+    <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         {/* Background elements */}
@@ -118,7 +116,7 @@ export default function Home() {
                 {/* Image Mask/Frame */}
                 <div className="absolute inset-4 rounded-full border-[3px] border-white shadow-2xl overflow-hidden z-20 bg-slate-200">
                   <img 
-                    src={headshot} 
+                    src={typeof headshot === "string" ? headshot : headshot.src} 
                     alt="Todd Greenbaum" 
                     className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
                   />
@@ -424,8 +422,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Footer */}
-      <Footer />
-    </div>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import { Mail, Phone } from "lucide-react";
 import { FaFacebook } from "react-icons/fa";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -32,10 +33,10 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="/#about" className="hover:text-white transition-colors">About Me</a></li>
-              <li><a href="/#services" className="hover:text-white transition-colors">Services</a></li>
-              <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link href="/#about" className="hover:text-white transition-colors">About Me</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
