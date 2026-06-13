@@ -113,10 +113,12 @@ export function Navigation() {
             <Button 
               size="sm" 
               className="bg-secondary hover:bg-secondary/90 text-white shadow-lg shadow-secondary/20 rounded-full px-6"
-              onClick={() => window.location.href = "tel:+15617635073"}
+              asChild
             >
-              <Phone className="w-4 h-4 mr-2" />
-              Call Now
+              <a href="tel:+15617635073">
+                <Phone className="w-4 h-4 mr-2" />
+                Call Now
+              </a>
             </Button>
           </div>
 
@@ -206,13 +208,12 @@ export function Navigation() {
             <Button 
               size="lg" 
               className="mt-4 bg-secondary text-white rounded-full w-48 shadow-lg shadow-secondary/20"
-              onClick={() => {
-                window.location.href = "tel:+15617635073";
-                setIsOpen(false);
-              }}
+              asChild
             >
-              <Phone className="w-5 h-5 mr-2" />
-              Call Now
+              <a href="tel:+15617635073" onClick={() => setIsOpen(false)}>
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
+              </a>
             </Button>
           </motion.div>
         )}
