@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { ContactForm } from "@/components/ContactForm";
 import { QuoteWidget } from "@/components/QuoteWidget";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -165,8 +166,75 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-20 bg-slate-50 border-t border-b border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">
+              Our Insurance Services
+            </h2>
+            <p className="text-slate-600 text-lg">
+              Explore specialized plans designed to protect your health, family, and assets.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: "Medicare Advantage (Part C)",
+                desc: "All-in-one plans bundling hospital, medical, and prescription drugs, with extra dental/vision benefits.",
+                link: "/medicare-advantage-plans"
+              },
+              {
+                title: "Medicare Supplement (Medigap)",
+                desc: "Policies designed to pay for Original Medicare's out-of-pocket gaps, deductibles, and coinsurance.",
+                link: "/medicare-supplement-plans"
+              },
+              {
+                title: "Dental Insurance Plans",
+                desc: "Preventive, basic, and major dental care plans, customized for Florida seniors and families.",
+                link: "/dental-insurance"
+              },
+              {
+                title: "Accident Insurance",
+                desc: "Provides cash benefits paid directly to you to cover high health plan deductibles after an injury.",
+                link: "/accident-insurance"
+              },
+              {
+                title: "Travel Insurance",
+                desc: "Protects your financial investment and health abroad where Medicare and standard plans do not apply.",
+                link: "/travel-insurance"
+              },
+              {
+                title: "Health & Life Insurance",
+                desc: "Individual/family health plans and customizable life policies to secure your family's future.",
+                link: "/services"
+              }
+            ].map((service, idx) => (
+              <Card key={idx} className="p-6 border border-slate-100 bg-white rounded-2xl flex flex-col hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-heading font-bold text-slate-900 mb-2">{service.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">{service.desc}</p>
+                <Link href={service.link} className="text-secondary hover:underline font-bold text-sm inline-flex items-center gap-1 group self-start">
+                  Learn Details
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button size="lg" className="rounded-full h-12 px-8 bg-secondary hover:bg-secondary/90 shadow-md" asChild>
+              <Link href="/services">
+                View All Services & Steps
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Quote Widget Section */}
-      <section className="py-12 bg-slate-50">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-heading font-bold text-slate-900">Get an Instant Quote</h2>
@@ -269,6 +337,45 @@ export default function Home() {
                  className="h-24 md:h-28 mx-auto"
                />
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Section */}
+      <section className="py-20 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">
+              Why Work with Todd Greenbaum?
+            </h2>
+            <p className="text-slate-600 text-lg">
+              Experience the difference of working with a dedicated, client-first Florida insurance specialist.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Local Florida Expertise",
+                desc: "Understanding local healthcare provider networks and county-specific Medicare plans is critical. I serve the entire state of Florida with specialized Boca Raton insights to ensure your chosen plans are accepted by your doctors."
+              },
+              {
+                title: "Unbiased Carrier Comparisons",
+                desc: "As an independent licensed agent, I represent multiple top-rated national and local carriers like Florida Blue. This allows me to compare rates and benefits objectively to find the optimal fit for your exact needs."
+              },
+              {
+                title: "Lifetime Relationship & Support",
+                desc: "My commitment doesn't end when your policy begins. From handling claims issues, annual benefit reviews during enrollment windows, or updating policy information, I serve as your dedicated personal advisor for the lifetime of your coverage."
+              }
+            ].map((feature, idx) => (
+              <div key={idx} className="bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary font-bold text-lg mb-6">
+                  {idx + 1}
+                </div>
+                <h3 className="text-xl font-heading font-bold text-slate-900 mb-3">{feature.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

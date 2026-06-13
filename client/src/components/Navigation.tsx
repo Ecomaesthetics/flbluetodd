@@ -61,10 +61,10 @@ export function Navigation() {
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full" />
             </a>
-            <a href="/#services" className="text-sm font-medium text-slate-600 hover:text-secondary transition-colors relative group">
+            <Link href="/services" className="text-sm font-medium text-slate-600 hover:text-secondary transition-colors relative group">
               Services
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full" />
-            </a>
+            </Link>
 
             {/* Plans Dropdown */}
             <div 
@@ -151,13 +151,13 @@ export function Navigation() {
             >
               About
             </a>
-            <a 
-              href="/#services" 
+            <Link 
+              href="/services" 
               className="text-2xl font-heading font-bold text-slate-800 hover:text-secondary"
               onClick={() => setIsOpen(false)}
             >
               Services
-            </a>
+            </Link>
 
             {/* Mobile Plans Submenu */}
             <div className="w-full max-w-xs text-center">

@@ -11,11 +11,13 @@ import TravelInsurance from "@/pages/travel-insurance";
 import DentalInsurance from "@/pages/dental-insurance";
 import MedicareAdvantagePlans from "@/pages/medicare-advantage-plans";
 import MedicareSupplementPlans from "@/pages/medicare-supplement-plans";
+import Services from "@/pages/services";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/services" component={Services} />
       <Route path="/contact" component={Contact} />
       <Route path="/accident-insurance" component={AccidentInsurance} />
       <Route path="/travel-insurance" component={TravelInsurance} />
