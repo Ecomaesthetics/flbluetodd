@@ -85,7 +85,7 @@ export default function Services() {
               <Badge className="mb-4 bg-secondary text-white hover:bg-secondary border-none px-3 py-1 text-xs uppercase tracking-wider font-semibold">
                 Expert Insurance Guidance
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-white mb-6 leading-tight">
                 Our Services & Plans
               </h1>
               <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
