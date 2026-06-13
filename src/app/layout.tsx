@@ -6,6 +6,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Todd Greenbaum | Licensed Florida Blue Insurance Agent",
   description: "Find the right insurance coverage with Todd Greenbaum, licensed Florida Blue sales agent. Get expert assistance with Medicare, health, life, and dental insurance.",
+  verification: {
+    google: "mVTdhfiP145pfKPRJlymqnVkoL5_p3eGjMDZI0dFuXk",
+  },
 };
 
 export default function RootLayout({
