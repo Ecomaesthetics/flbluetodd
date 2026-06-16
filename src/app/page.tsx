@@ -306,7 +306,7 @@ export default function Home() {
               <h3 className="text-xl font-heading font-bold mb-3">Google Reviews</h3>
               <p className="text-slate-500 mb-6">Share your experience and help others find the right coverage.</p>
               <Button asChild className="w-full bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 hover:border-slate-300 shadow-sm">
-                <a href="https://maps.app.goo.gl/mM85m1yA6EQceZwe9" target="_blank" rel="noopener noreferrer">
+                <a href="https://g.page/r/CRzak7X-sE2GEBE/review" target="_blank" rel="noopener noreferrer">
                   Write a Review
                 </a>
               </Button>
